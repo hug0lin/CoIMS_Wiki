@@ -289,15 +289,9 @@ Use adb debugging with filter for "ims" keyword
 
 ## Note
 
-### To test whether VoWiFi is enabled or not (assuming un-trusted 3gpp access via WLAN)
+### Testing whether VoWiFi is enabled or not
 
-1. Program/Configure the PLMN of the SIM (and 4G network) to an operator who has wide deployment of VoWiFi (e.g. Airtel India (MCC: 404, MNC:45), Vodafone India, Reliance Jio India)
-
-OR
-
-1. Use a Samsung chipset based device, in which one can access the IMS settings. There, type in the ePDG DNS name or its IP address
-2. Setup a DNS to resolve epdg.pub.epc.mncXXX.mccXXX.3gppnetwork.org and make sure UE gets the DNS IP address when it gets connected to WiFi AP
-3. Have the setup required for VoWiFi ready (i.e. WiFi AP + ePDG + ePDG integrated with EPC) - More info about the architecture can be found [here](https://www.netmanias.com/en/post/oneshot/8127/lte-network-architecture-wi-fi-epdg/3gpp-based-lte-and-wi-fi-interworking-architecture-epdg-s2b)
+Follow the instructions [here](https://github.com/herlesupreeth/docker_open5gs?tab=readme-ov-file#testing-vowifi-with-cots-ue) to setup ePDG + Core Network to test VoWiFi functionality.
 
 ## Potential reasons for this method not working
 1. If the message in CoIMS show **Unrecognised Carrier Id. App may not work as intended** it means there is no CarrierId for that PLMN in AOSP - **Not shown in Android 8.0 and 8.1 devices**
